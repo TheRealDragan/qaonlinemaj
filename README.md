@@ -1,2 +1,2 @@
 # qaonlinemaj
-QA Onlajn maj
+QA Onlajn may
