@@ -24,4 +24,8 @@ public class Calculator {
 		
 	}
 	
+	static int subtractNumbers(int a, int b) {
+		return a - b;
+	}
+	
 }
