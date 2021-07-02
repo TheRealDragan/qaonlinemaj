@@ -8,7 +8,7 @@ public class Calculator {
 		return numberOnScreen + a;
 	}
 	
-	static int addNumbers(int a, int b) {
+	public static int addNumbers(int a, int b) {
 //		addNumber(3); -> nije moguce pozvati nestaticku metodu iz staticke metode
 		// razlog: staticka metoda postoji bez da postoji ijedan objekat te klase (videti klasu staticdemo i poziv ove metode
 		// bez pravljenje ijednog Calculator objekta
@@ -16,7 +16,7 @@ public class Calculator {
 		return a + b;
 	}
 	
-	static void printSmallNumber(int number) {
+	public static void printSmallNumber(int number) {
 		if (number >= 1000) {
 			throw new RuntimeException("Ova metoda radi samo za brojeve manje od 1000");
 		}
@@ -24,7 +24,7 @@ public class Calculator {
 		
 	}
 	
-	static int subtractNumbers(int a, int b) {
+	public static int subtractNumbers(int a, int b) {
 		return a - b;
 	}
 	

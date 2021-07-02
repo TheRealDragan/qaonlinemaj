@@ -6,6 +6,8 @@ public class ThreadSleepDemo {
 		System.out.println("Sad ce biti 5 sekundi izmedju ispisa");
 		Thread.sleep(5000);
 		System.out.println("Jesam vam rekao??");
+		
+		System.out.println("Pokazujem kako rade grane!");
 
 	}
 
