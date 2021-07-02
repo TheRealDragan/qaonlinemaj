@@ -7,8 +7,8 @@ public class Calculator {
 	double addNumber(double a) {
 		return numberOnScreen + a;
 	}
-	
-	public static int addNumbers(int a, int b) {
+	//poy Sinisa
+	public static int addNumbers(int a, int b) {  
 //		addNumber(3); -> nije moguce pozvati nestaticku metodu iz staticke metode
 		// razlog: staticka metoda postoji bez da postoji ijedan objekat te klase (videti klasu staticdemo i poziv ove metode
 		// bez pravljenje ijednog Calculator objekta
