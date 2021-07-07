@@ -2,7 +2,7 @@ package basics;
 
 public class CodeStudent {
 	
-	 String name;
+	public String name;
 	public String lastName;
 	//int grade;
 	public Integer pointsOnExam;
@@ -35,20 +35,38 @@ public class CodeStudent {
 		this.sex = sex;
 	}
 
-	void sayYourNameWithPronoun () {
+	public String sayYourNameWithPronoun () {
 		if (sex == Sex.FEMALE) {
-			System.out.println("Miss "+name+" " + lastName);
+			return "Miss "+name+" " + lastName;
 		}
 		if (sex == Sex.MALE) {
-			System.out.println("Mr "+name+" " + lastName);
+			return "Mr "+name+" " + lastName;
 		}
-		if (sex == null || sex == Sex.OTHER) {
-			System.out.println(name+" " +lastName);
-		}
-	//	if (sex == null) {
-	//		System.out.println("Pol nije izabran!"); --> jedno resenje
-	//	}
+		
+		return name+" " +lastName;
+		
 	}
+	
+
+	public int calculateGrade() {		
+
+		if (pointsOnExam > 100 || pointsOnExam < 0) {
+			throw new RuntimeException("Nevalidan prosledjeni broj poena!!");
+		}
+		
+		if (pointsOnExam < 50) {
+			return 5;
+		}
+		
+		if (pointsOnExam == 100) {
+			return 10;
+		}
+		
+		
+		return pointsOnExam / 10 + 1;
+		
+	}
+	
 	
 	void printNumber(int number) {
 		System.out.println(number);
@@ -66,37 +84,6 @@ public class CodeStudent {
 		System.out.println("Hi, my name is " + name + "!");
 	}
 	
-	public int calculateGrade() {
-				
-		if (pointsOnExam < 50) {
-			return 5;
-		}
-		
-		if (pointsOnExam == 100) {
-			return 10;
-		}
-		
-		return pointsOnExam / 10 + 1;
-		
-//		if (pointsOnExam > 50 && pointsOnExam < 60) {
-//			return 6;
-//		}
-//		if (pointsOnExam > 60 && pointsOnExam < 70) {
-//			return 7;
-//		}
-//		if (pointsOnExam > 70 && pointsOnExam < 80) {
-//			return 8;
-//		}
-//		if (pointsOnExam > 80 && pointsOnExam < 90) {
-//			return 9;
-//		}
-//		if (pointsOnExam > 90 && pointsOfExam < 100 ) {
-//			return 10;
-//		}
-//		
-//		return 5;
-		
-	}
 
 	@Override
 	public int hashCode() {
